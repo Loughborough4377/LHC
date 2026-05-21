@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Loughborough Housing Corporation</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  body { 
+    font-family: 'Merriweather', serif; 
+  }
+</style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+			  page: '#ecf3ee',
+              light: '#f0fdf4', 
+              DEFAULT: '#166534', 
+              dark: '#14532d',    
+              deep: '#064e3b',    
+              accent: '#dcfce7',  
+            },
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-brand-page">
+
+<nav class="bg-white/90 backdrop-blur sticky top-0 z-50 border-b">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-brand-deep">Loughborough Housing Corporation</h1>
+
+    <div class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-brand transition">Home</a>
+      <a href="about.html" class="hover:text-brand transition">About</a>
+      <a href="gallery.html" class="hover:text-brand transition">Gallery</a>
+      <a href="faq.html" class="hover:text-brand transition">FAQ</a>
+	  <a href="apply.html" class="hover:text-brand transition">Apply</a>
+	  <a href="resources.html" class="hover:text-brand transition">Resources</a>
+      <a href="contact.html" class="bg-brand text-white px-4 py-2 rounded-lg hover:bg-brand-dark transition">
+        Contact
+      </a>
+    </div>
+
+    <button id="menuBtn" class="md:hidden text-2xl text-brand">☰</button>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2 bg-white">
+    <a href="index.html" class="block py-2">Home</a>
+    <a href="about.html" class="block py-2">About</a>
+    <a href="gallery.html" class="block py-2 font-bold text-brand">Gallery</a>
+	<a href="faq.html" class="block py-2">FAQ</a>
+    <a href="apply.html" class="block py-2 font-bold text-brand">Apply</a>
+	<a href="resources.html" class="block py-2 font-bold text-brand">Resources</a>
+    <a href="contact.html" class="block py-2 text-brand font-semibold">Contact</a>
+  </div>
+</nav>
+
+<section class="max-w-3xl mx-auto px-4 py-20">
+  <h1 class="text-3xl font-bold mb-8 text-brand-deep">Frequently Asked Questions</h1>
+
+  <div class="space-y-4">
+
+    <div class="group bg-white rounded-xl shadow-sm border border-gray-100 p-5 cursor-pointer hover:bg-brand-light transition-colors" onclick="toggleFAQ(this)">
+  <div class="flex justify-between items-center">
+    <h3 class="font-semibold text-gray-800 group-hover:text-brand-dark">What do we provide?</h3>
+    <span class="text-brand text-xl">+</span>
+  </div>
+  
+  <div class="text-gray-600 mt-3 hidden leading-relaxed">
+    <p>At Loughborough Housing Corporation we are committed to providing safe, affordable comfortable yet independent apartment living...</p>
+    
+    <ul class="list-disc ml-5 my-3">
+      <li>Private, Self-contained apartments designed for comfort while addressing the needs of senior tenants.</li>
+      <li>A secure, well-maintained and up to date building including common areas and grounds.</li>
+      <li>Age-friendly features, such as elevators, accessibility supports, and safety considerations.</li>
+      <li>Reasonably priced housing made possible through our non-for-profit model.</li>
+    </ul>
+
+    <strong>What we do NOT provide:</strong>
+    <ul class="list-disc ml-5 mt-2">
+      <li>We are not a nursing or medical care facility.</li>
+      <li>We do not provide personal care, medical services but tenants are encouraged and required to be able to arrange outside support as needed.</li>
+    </ul>
+    
+    <p class="mt-4">Our goal is to provide a place that feels like home.</p>
+  </div>
+</div>
+
+    <div class="group bg-white rounded-xl shadow-sm border border-gray-100 p-5 cursor-pointer hover:bg-brand-light transition-colors" onclick="toggleFAQ(this)">
+  <div class="flex justify-between items-center">
+    <h3 class="font-semibold text-gray-800 group-hover:text-brand-dark">Who can apply?</h3>
+    <span class="text-brand text-xl">+</span>
+  </div>
+  
+  <div class="text-gray-600 mt-3 hidden leading-relaxed">
+    <p>We offer independent senior living apartments with both Rent‑Geared‑to‑Income (RGI) and market‑rent options. Eligibility depends on the type of housing being applied for and the availability. All applicants must:</p>
+    
+    <ul class="list-disc ml-5 my-3">
+      <li>Be at least 65 Years of age</li>
+      <li>Be legally entitled to reside in Canada</li>
+      <li>Agree and follow the terms of the lease and building rules</li>
+      <li>Be able to live independently in a non-medical, non-care setting</li>
+    </ul>
+  </div>
+</div>
+	
+<div class="group bg-white rounded-xl shadow-sm border border-gray-100 p-5 cursor-pointer hover:bg-brand-light transition-colors" onclick="toggleFAQ(this)">
+  <div class="flex justify-between items-center">
+    <h3 class="font-semibold text-gray-800 group-hover:text-brand-dark">What is RGI and How does it work?</h3>
+    <span class="text-brand text-xl">+</span>
+  </div>
+  
+  <div class="text-gray-600 mt-3 hidden leading-relaxed">
+    <p>RGI stands for Rent‑Geared‑to‑Income. In Ontario, RGI housing helps make rent affordable by adjusting it based on a household’s income.<br>How Your Rent Is Calculated</br>Your rent is usually set at approximately 30% of your household’s gross monthly income.<br>Income includes sources such as: </p>
+    
+    <ul class="list-disc ml-5 my-3">
+      <li>Old Age Security (OAS)</li>
+      <li>Canada Pension Plan (CPP)</li>
+      <li>Guaranteed Income Supplement (GIS)</li>
+      <li>Employment income or other pensions (if applicable)</li>
+	  <li>Private pension plans</li>
+	  <li>Assets (liquid or non-liquid assets)</li>
+    </ul>
+	
+	<p class="mt-4">RGI housing helps ensure seniors can maintain stable, affordable housing while continuing to live independently. When applying for RGI with Loughborough Housing Corporation, administered by our service manager, applicants must meet the following eligibility:</p>
+<ul class="list-disc ml-5 my-3">
+      <li>Be at least the minimum age required for our seniors’ housing (65)</li>
+      <li>Have an eligible immigration status</li>
+      <li>Meet income and asset limits set by the Province of Ontario</li>
+      <li>Applications are reviewed and placed on a centralized waiting list</li>
+    </ul>
+	
+	<p class="mt-4">Once housed, tenants are required to complete an annual income review where your rent is subject to change if your income changes. Any change in income must be reported promptly to ensure rent is calculated correctly. The staff here at Loughborough Housing Corporation will provide a personal explanation of all this upon acceptance.</p>
+  </div>
+</div>
+	
+	<div class="group bg-white rounded-xl shadow-sm border border-gray-100 p-5 cursor-pointer hover:bg-brand-light transition-colors" onclick="toggleFAQ(this)">
+  <div class="flex justify-between items-center">
+    <h3 class="font-semibold text-gray-800 group-hover:text-brand-dark">Who is eligible to apply for RGI?</h3>
+    <span class="text-brand text-xl">+</span>
+  </div>
+  
+  <div class="text-gray-600 mt-3 hidden leading-relaxed">
+    <p>To be eligible for Rent‑Geared‑to‑Income (RGI) seniors’ housing in Ontario, applicants must meet provincial and local eligibility requirements. Eligibility is determined by the local Service Manager, in accordance with Ontario housing legislation. The basic requirements for applicants are:</p>
+    
+    <ul class="list-disc ml-5 my-3">
+      <li>Be at least 65 years of age</li>
+      <li>Have legal status in Canada (Canadian citizen, permanent resident, or eligible under immigration rules)</li>
+      <li>Meet income and asset limits established for RGI housing.</li>
+      <li>Be able to live in an independent apartment setting.</li>
+    </ul>
+	
+	<p class="mt-4">To be considered able to live in an independent apartment setting, you must be willing and able to care for yourself, with or without the help of an emergency contact. Tenants (or their emergency contact/substitute decision-maker) are responsible for arranging any personal care providers (Nurses, PSW’s or Social workers) they see fit without managements involvement.</p>
+  </div>
+</div>
+
+<div class="group bg-white rounded-xl shadow-sm border border-gray-100 p-5 cursor-pointer hover:bg-brand-light transition-colors" onclick="toggleFAQ(this)">
+  <div class="flex justify-between items-center">
+    <h3 class="font-semibold text-gray-800 group-hover:text-brand-dark">How long is our wait list?</h3>
+    <span class="text-brand text-xl">+</span>
+  </div>
+  
+  <div class="text-gray-600 mt-3 hidden leading-relaxed">
+    <p>Wait times vary depending on apartment availability and housing type. Rent‑Geared‑to‑Income (RGI) apartments are offered through a centralized waiting list and may have wait times of several years. At this time, our building has more market‑rent apartments than RGI units, and the Service Manager is working toward increasing RGI placements as units become available. Market‑rent apartments typically have shorter wait times and are offered based on current availability. Exact wait times cannot be guaranteed, and applicants are encouraged to keep their contact information up to date.</p>
+    </div>
+</div>
+
+<div class="group bg-white rounded-xl shadow-sm border border-gray-100 p-5 cursor-pointer hover:bg-brand-light transition-colors" onclick="toggleFAQ(this)">
+  <div class="flex justify-between items-center">
+    <h3 class="font-semibold text-gray-800 group-hover:text-brand-dark">How do I Apply?</h3>
+    <span class="text-brand text-xl">+</span>
+  </div>
+  
+  <div class="text-gray-600 mt-3 hidden leading-relaxed">
+    <p><a href="https://www.cityofkingston.ca/media/4epgsmdh/socialservices_form_rentgearedtoincomeassistance.pdf" target="_blank" style="color: blue;">Apply at the City of Kingston website</a></p>
+	<p><a href="https://loughboroughhousing-my.sharepoint.com/:b:/g/personal/hello_loughboroughhousing_ca/IQC6deSMaVhxS6OxDBKwwOLKAY0aDn6Y6dl5LH_Zxwb4Dyk" target="_blank" style="color: blue;"><br>And with the Loughborough Housing Corporation form</a></p>
+    </div>
+</div>
+
+<div class="group bg-white rounded-xl shadow-sm border border-gray-100 p-5 cursor-pointer hover:bg-brand-light transition-colors" onclick="toggleFAQ(this)">
+  <div class="flex justify-between items-center">
+    <h3 class="font-semibold text-gray-800 group-hover:text-brand-dark">What can I expect from the building?</h3>
+    <span class="text-brand text-xl">+</span>
+  </div>
+  
+  <div class="text-gray-600 mt-3 hidden leading-relaxed">
+    <p>Our seniors’ apartment building offers safe, well‑maintained, independent living in a welcoming community. Residents can expect on‑site management, a 24/7 emergency contact, and prompt attention to building‑related concerns.<br>The building includes garbage and recycling services, elevators, and several shared amenities such as common rooms with small kitchenettes, a garden area, and outdoor patio and gazebo spaces for residents to enjoy. Common areas are maintained for comfort, safety, and social connection.<br>Management is responsible for the care and operation of the building and for assisting with housing‑related questions. As this is an independent living community, personal care, medical services, and advocacy are not provided, and management is not involved in residents’ individual support arrangements </p>
+    </div>
+</div>
+
+<div class="group bg-white rounded-xl shadow-sm border border-gray-100 p-5 cursor-pointer hover:bg-brand-light transition-colors" onclick="toggleFAQ(this)">
+  <div class="flex justify-between items-center">
+    <h3 class="font-semibold text-gray-800 group-hover:text-brand-dark">What services are available nearby?</h3>
+    <span class="text-brand text-xl">+</span>
+  </div>
+  
+  <div class="text-gray-600 mt-3 hidden leading-relaxed">
+    <p>Our building is located in the heart of the Village of Sydenham, close to many everyday amenities. Within walking distance, residents can access a grocery store, pharmacy, library, local shops, restaurants, and parks, as well as community supports such as the Grace Social & Activity Centre and the local food bank. Living in the village allows residents to meet many daily needs without reliance on a vehicle, depending on individual mobility.</p>
+    </div>
+</div>
+
+  </div>
+</section>
+
+<footer class="bg-brand-page border-t mt-20">
+  <div class="max-w-6xl mx-auto px-4 py-8 text-center text-gray-500 text-sm">
+    © 2026 Loughborough Housing Corporation.
+  </div>
+</footer>
+
+<script>
+function toggleFAQ(element) {
+    // This looks for the content area (the 2nd div or p inside the container)
+    // We target the element that has the 'mt-3' class
+    const content = element.querySelector('.mt-3');
+    const icon = element.querySelector('span');
+    
+    if (!content) return; // Safety check
+
+    content.classList.toggle('hidden');
+    
+    if (content.classList.contains('hidden')) {
+        icon.textContent = '+';
+    } else {
+        icon.textContent = '−';
+    }
+}
+</script>
+
+<script>
+const btn = document.getElementById('menuBtn');
+const menu = document.getElementById('mobileMenu');
+
+btn.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+});
+</script>
+
+</body>
+</html>
